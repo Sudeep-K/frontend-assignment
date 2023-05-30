@@ -1,3 +1,5 @@
+'use client'
+import Link from 'next/link'
 import React from 'react'
 
 const TrendingComponent = ({ songChart }) => {
@@ -8,7 +10,7 @@ const TrendingComponent = ({ songChart }) => {
             <h1>Trending #1</h1>
             <h1 className='text-6xl font-bold'>{ songChart.title }</h1>
             <h2 className='text-4xl font-bold'>{ songChart.subtitle }</h2>
-            <button className='w-2/3 bg-orange text-light-green font-bold text-2xl px-4 py-2 rounded-xl drop-shadow-lg'>See More</button>
+            <button className='w-2/3 bg-orange text-light-green font-bold text-2xl px-4 py-2 rounded-xl drop-shadow-lg'><Link href={`/search/songs/${songChart.key}`}>See More</Link></button>
         </div>
     </div>
   )

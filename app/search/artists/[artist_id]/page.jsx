@@ -1,6 +1,11 @@
 import React from 'react'
 import ArtistInfo from './../../../components/ArtistInfo';
 
+export const metadata = {
+  title: 'Artist Info',
+  description: 'Artist Info',
+}
+
 const ArtistInfoPage = ({ params: {artist_id}}) => {
   return (
     <div className='container'>
@@ -10,6 +15,3 @@ const ArtistInfoPage = ({ params: {artist_id}}) => {
 }
 
 export default ArtistInfoPage
-
-// latest release ko list
-// ani top songs ko list

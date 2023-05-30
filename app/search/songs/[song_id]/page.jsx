@@ -1,6 +1,11 @@
 import React from 'react'
 import SongInfo from './../../../components/SongInfo';
 
+export const metadata = {
+  title: 'Song Info',
+  description: 'Song Info',
+}
+
 const SongInfoPage = ({ params: { song_id }}) => {
   return (
     <div className='container mt-10'>
