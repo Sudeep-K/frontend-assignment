@@ -27,9 +27,7 @@ const fetchSongInfo = async (song_id) => {
 }
 
 const SongInfo = async ({ song_id }) => {
-  console.log(song_id)
   const songDetails = await fetchSongInfo(song_id);
-  console.log(songDetails)
 
   return (
     <Suspense fallback={<div>Loading...</div>}>
@@ -40,12 +38,10 @@ const SongInfo = async ({ song_id }) => {
               <h2 className="text-2xl"><strong>Album:</strong> {songDetails.albumadamid}</h2>
               <h2 className="text-2xl"><strong>Genre:</strong> {songDetails.genres.primary}</h2>
               <h2 className="text-2xl"><strong>Artist:</strong> {songDetails.subtitle}</h2>
-              <Link href={songDetails.url}>  
-                <button className="w-[150px] flex justify-center items-center gap-3 bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-full">
-                    <span className="text-xl font-bold">shazam</span> 
-                    <span className="text-xl font-bold"><SiShazam/></span>
-                </button>
-              </Link>
+              <button className="w-[150px] flex justify-center items-center gap-3 bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-full">
+                <span className="text-xl font-bold">shazam</span> 
+                <span className="text-xl font-bold"><SiShazam/></span>
+              </button>
           </div>
       </div>
     </Suspense>

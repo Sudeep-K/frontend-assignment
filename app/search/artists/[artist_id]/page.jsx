@@ -1,10 +1,10 @@
 import React from 'react'
 import ArtistInfo from './../../../components/ArtistInfo';
 
-const ArtistInfoPage = () => {
+const ArtistInfoPage = ({ params: {artist_id}}) => {
   return (
     <div className='container'>
-        <ArtistInfo />
+        <ArtistInfo artist_id={artist_id}/>
     </div>
   )
 }
