@@ -13,7 +13,7 @@ const fetchSongCharts = async () => {
       startFrom: '0'
     },
     headers: {
-      'X-RapidAPI-Key': '2e97a37ad8mshadda66512435510p1aca9djsn1296825c9dec',
+      'X-RapidAPI-Key': process.env.rapid_api,
       'X-RapidAPI-Host': 'shazam.p.rapidapi.com'
     }
   };
