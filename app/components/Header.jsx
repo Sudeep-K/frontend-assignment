@@ -6,7 +6,7 @@ const Header = () => {
   return (
     <div className='bg-navy-blue'>
       <div className='container py-4 flex justify-between items-center'>
-        <img src='./logo.svg' alt='logo' />
+        <img src='/logo.svg' alt='logo' />
         <SearchBar />
       </div>
     </div>
