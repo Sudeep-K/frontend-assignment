@@ -5,7 +5,7 @@ import { useState } from 'react';
 import axios from 'axios';
 import SearchSuggestion from './SearchSuggestion';
 
-import { useSelector, useDispatch } from 'react-redux';
+import { useDispatch } from 'react-redux';
 import { setQuery } from '../GlobalRedux/Features/query/querySlice';
 import { setQueryResult } from '../GlobalRedux/Features/queryResult/queryResultSlice';
 import { useRouter } from 'next/navigation';
@@ -35,16 +35,24 @@ const SearchBar = () => {
   const [searchResult, setSearchResult] = useState([]);
   const dispatch = useDispatch()
 
-  useEffect(() => {
-    const delayDebounceFn = setTimeout(async () => {
-      if (searchTerm) {
-        const result = await fetchSearchData(searchTerm);
-        setSearchResult(result);
-      }
-    }, 100)
+  // useEffect(() => {
+  //   const delayDebounceFn = setTimeout(async () => {
+  //     if (searchTerm) {
+  //       const result = await fetchSearchData(searchTerm);
+  //       setSearchResult(result);
+  //     }
+  //   }, 1000)
 
-    return () => clearTimeout(delayDebounceFn)
-  }, [searchTerm])
+  //   return () => clearTimeout(delayDebounceFn)
+  // }, [searchTerm])
+
+  // const searchSuggestor = async (e) => {
+  //   setSearchTerm(e.target.value)
+  //   if (searchTerm) {
+  //     const result = await fetchSearchData(searchTerm);
+  //     setSearchResult(result);
+  //   }
+  // }
 
   const { push } = useRouter()
 
